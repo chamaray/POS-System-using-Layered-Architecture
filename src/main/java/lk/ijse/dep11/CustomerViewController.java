@@ -60,7 +60,7 @@ public class CustomerViewController {
             new Alert(Alert.AlertType.INFORMATION,result).show();
             clearForm();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         clearForm();
         loadAllCustomers();
@@ -74,7 +74,7 @@ public class CustomerViewController {
             String result = customerController.updateCustomer(customerDto);
             new Alert(Alert.AlertType.INFORMATION,result).show();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         clearForm();
         loadAllCustomers();
@@ -87,7 +87,7 @@ public class CustomerViewController {
             String result = customerController.deleteCustomer(id);
             new Alert(Alert.AlertType.INFORMATION).show();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         clearForm();
         loadAllCustomers();
@@ -111,7 +111,7 @@ public class CustomerViewController {
                 txtCustomerPostal.setText(customerDto.getPostalCode());
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
     }
@@ -136,7 +136,7 @@ public class CustomerViewController {
             }
             }
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
     }
