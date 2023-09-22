@@ -1,6 +1,7 @@
 package lk.ijse.dep11.dao;
 
 import lk.ijse.dep11.dao.custom.impl.CustomerDaoImpl;
+import lk.ijse.dep11.dao.custom.impl.ItemDaoImpl;
 
 public class DaoFactory {
     private static DaoFactory daoFactory;
@@ -17,12 +18,14 @@ public class DaoFactory {
         switch (types){
             case CUSTOMER:
                 return new CustomerDaoImpl();
+            case ITEM:
+                return new ItemDaoImpl();
             default:
                 return null;
         }
     }
 
     public enum DaoTypes{
-        CUSTOMER
+        CUSTOMER,ITEM
     }
 }
