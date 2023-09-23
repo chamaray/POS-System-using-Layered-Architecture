@@ -38,8 +38,8 @@ public class ItemViewController {
 
     public void btnAddItemOnAction(ActionEvent actionEvent) {
         int id = Integer.parseInt(txtItemId.getText());
-        int qoh = Integer.parseInt(txtQOH.getText());
-        double unitPrice = Double.parseDouble(txtUnitPrice.getText());
+        Integer qoh = Integer.parseInt(txtQOH.getText());
+        Double unitPrice = Double.parseDouble(txtUnitPrice.getText());
         ItemDto itemDto = new ItemDto(id,txtItemName.getText(),qoh,unitPrice);
         try {
             String result = itemController.addItem(itemDto);
@@ -53,8 +53,8 @@ public class ItemViewController {
     }
 
     public void btnUpdateItemOnAction(ActionEvent actionEvent) {
-        int id = Integer.parseInt(txtItemId.getText());
-        int qoh = Integer.parseInt(txtQOH.getText());
+        Integer id = Integer.parseInt(txtItemId.getText());
+        Integer qoh = Integer.parseInt(txtQOH.getText());
         double unitPrice = Double.parseDouble(txtUnitPrice.getText());
         ItemDto itemDto = new ItemDto(id,txtItemName.getText(),qoh,unitPrice);
         try {
@@ -94,7 +94,7 @@ public class ItemViewController {
             if(itemDto != null){
                 txtItemId.setText(Integer.toString(itemDto.getId()));
                 txtItemName.setText(itemDto.getName());
-                txtItemName.setText(Integer.toString(itemDto.getQtyOnHand()));
+                txtItemName.setText(Integer.toString(itemDto.getQOH()));
                 txtUnitPrice.setText(Double.toString(itemDto.getUnitPrice()));
 
             }

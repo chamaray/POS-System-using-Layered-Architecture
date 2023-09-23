@@ -3,16 +3,16 @@ package lk.ijse.dep11.dto;
 public class ItemDto {
     private int id;
     private String name;
-    private int qtyOnHand;
+    private int qoh;
     private double unitPrice;
 
     public ItemDto() {
     }
 
-    public ItemDto(int id, String name, int qtyOnHand, double unitPrice) {
+    public ItemDto(int id, String name, int qoh, double unitPrice) {
         this.id = id;
         this.name = name;
-        this.qtyOnHand = qtyOnHand;
+        this.qoh = qoh;
         this.unitPrice = unitPrice;
     }
 
@@ -32,12 +32,12 @@ public class ItemDto {
         this.name = name;
     }
 
-    public int getQtyOnHand() {
-        return qtyOnHand;
+    public int getQOH() {
+        return qoh;
     }
 
-    public void setQtyOnHand(int qtyOnHand) {
-        this.qtyOnHand = qtyOnHand;
+    public void setQOH(int qtyOnHand) {
+        this.qoh = qoh;
     }
 
     public double getUnitPrice() {
@@ -53,7 +53,7 @@ public class ItemDto {
         return "ItemDto{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", qtyOnHand=" + qtyOnHand +
+                ", qoh=" + qoh +
                 ", unitPrice=" + unitPrice +
                 '}';
     }

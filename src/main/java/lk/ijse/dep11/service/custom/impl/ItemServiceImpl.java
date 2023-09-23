@@ -17,7 +17,7 @@ public class ItemServiceImpl implements ItemService {
     ItemDao itemDao = (ItemDao) DaoFactory.getDaoFactory().getDao(DaoFactory.DaoTypes.ITEM);
     @Override
     public String addItem(ItemDto itemDto) throws Exception {
-        if(itemDao.add(new ItemEntity(itemDto.getId(),itemDto.getName(),itemDto.getQtyOnHand(),itemDto.getUnitPrice()))){
+        if(itemDao.add(new ItemEntity(itemDto.getId(),itemDto.getName(),itemDto.getQOH(),itemDto.getUnitPrice()))){
             return  "Successfully Added";
         }else{
             return "Fail";
@@ -26,7 +26,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public String updateItem(ItemDto itemDto) throws Exception {
-        if(itemDao.update(new ItemEntity(itemDto.getId(),itemDto.getName(),itemDto.getQtyOnHand(),itemDto.getUnitPrice()))){
+        if(itemDao.update(new ItemEntity(itemDto.getId(),itemDto.getName(),itemDto.getQOH(),itemDto.getUnitPrice()))){
             return  "Successfully Added";
         }else{
             return "Fail";
