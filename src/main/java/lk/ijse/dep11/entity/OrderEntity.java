@@ -1,24 +1,19 @@
-package lk.ijse.dep11.dto;
+package lk.ijse.dep11.entity;
 import java.util.Date;
-import java.util.List;
-
-public class OrderDto {
+public class OrderEntity {
     private int id;
     private int custId;
     private Date orderDate;
     private double total;
 
-    List<OrderDetailDto> orderDetailDtos;
-
-    public OrderDto() {
+    public OrderEntity() {
     }
 
-    public OrderDto(int id, int custId, Date orderDate, double total, List<OrderDetailDto> orderDetailDtos) {
+    public OrderEntity(int id, int custId, Date orderDate, double total) {
         this.id = id;
         this.custId = custId;
         this.orderDate = orderDate;
         this.total = total;
-        this.orderDetailDtos = orderDetailDtos;
     }
 
     public int getId() {
@@ -53,22 +48,13 @@ public class OrderDto {
         this.total = total;
     }
 
-    public List<OrderDetailDto> getOrderDetailDtos() {
-        return orderDetailDtos;
-    }
-
-    public void setOrderDetailDtos(List<OrderDetailDto> orderDetailDtos) {
-        this.orderDetailDtos = orderDetailDtos;
-    }
-
     @Override
     public String toString() {
-        return "OrderDto{" +
+        return "OrderEntity{" +
                 "id=" + id +
                 ", custId=" + custId +
                 ", orderDate=" + orderDate +
                 ", total=" + total +
-                ", orderDetailDtos=" + orderDetailDtos +
                 '}';
     }
 }
