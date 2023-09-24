@@ -14,7 +14,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage)throws Exception {
-        AnchorPane root = FXMLLoader.load(getClass().getResource("/view/OrderView.fxml"));
+        AnchorPane root = FXMLLoader.load(getClass().getResource("/view/CustomerView.fxml"));
         Scene mainScene = new Scene(root);
         primaryStage.setScene(mainScene);
         primaryStage.setTitle("Table View2");
